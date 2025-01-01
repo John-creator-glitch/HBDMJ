@@ -1,0 +1,290 @@
+/* Base Styles */
+body {
+    font-family: 'Raleway', sans-serif;
+    background: linear-gradient(135deg, #ff7f50, #ff1493);
+    margin: 0;
+    padding: 0;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Pop-up Styling */
+.birthday-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: none;
+    z-index: 9999;
+}
+
+.birthday-popup h2 {
+    color: #ff1493;
+}
+
+.birthday-popup p {
+    color: #555;
+    margin: 10px 0;
+}
+
+.birthday-popup button {
+    background-color: #ff1493;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.birthday-popup button:hover {
+    background-color: #ff69b4;
+}
+
+/* Navigation */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 5px 0;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff1493;
+    border-bottom: 2px solid #ff1493;
+}
+
+/* Section Styling */
+.section {
+    padding: 50px 20px;
+    margin-top: 80px;
+    background: #fff;
+    border-radius: 15px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+/* Animations */
+.animate-text {
+    animation: fadeIn 2s ease-out;
+}
+
+.animate-pop {
+    animation: popUp 0.5s ease-out;
+}
+
+.animate-slide-up {
+    animation: slideUp 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes popUp {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Hover effects for images */
+.gallery-grid img:hover, .card img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+.wish {
+    background: linear-gradient(135deg, #ff69b4, #ff1493); /* Gradient button */
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 8px; /* Rounded corners */
+    text-align: center;
+    transition: transform 0.3s, background 0.3s; /* Adds hover animations */
+    margin: 10px auto;
+}
+
+
+/* Background styling */
+header {
+    background: linear-gradient(135deg, #ff1493, #ff7f50);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    border-bottom: 5px solid #ff1493;
+}
+
+header h1 {
+    font-size: 3.5em;
+}
+
+header p {
+    font-size: 1.5em;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+footer p {
+    font-size: 1.2em;
+}
+
+.mute-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 2em;
+    cursor: pointer;
+}
+/* Memories Section */
+.memories .card {
+    display: flex;
+    flex-wrap: wrap;
+    background: linear-gradient(135deg, #ffb6c1, #ffe5e5);
+    border-radius: 15px;
+    margin: 20px auto;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 900px;
+}
+
+.memories .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+.memories .card img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    object-fit: cover;
+}
+
+.memories .card-content {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.memories .card-content h3 {
+    color: #ff6f61;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.memories .card-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Timeline Section */
+.timeline .event {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    background: linear-gradient(135deg, #ffe5e5, #ff9a9e);
+    border-radius: 15px;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 900px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline .event:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+.timeline .event img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.timeline .event .content {
+    flex: 1;
+    padding: 10px 20px;
+}
+
+.timeline .event .content h3 {
+    font-size: 1.5rem;
+    color: #ff6f61;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.timeline .event .content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: justify;
+}
