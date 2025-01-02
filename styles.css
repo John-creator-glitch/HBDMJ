@@ -8,41 +8,33 @@ body {
     overflow-x: hidden;
 }
 
-/* Pop-up Styling */
+/* Popup */
 .birthday-popup {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #fff;
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    border-radius: 15px;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     text-align: center;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
     display: none;
     z-index: 9999;
-}
-
-.birthday-popup h2 {
-    color: #ff1493;
-}
-
-.birthday-popup p {
-    color: #555;
-    margin: 10px 0;
+    animation: bounceIn 1s ease-out;
 }
 
 .birthday-popup button {
-    background-color: #ff1493;
+    background: #ff69b4;
     color: white;
     border: none;
     padding: 10px 20px;
-    cursor: pointer;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .birthday-popup button:hover {
-    background-color: #ff69b4;
+    background: #ff85b3;
 }
 
 /* Navigation */
@@ -65,13 +57,13 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 20px;
+    margin: 0 10px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 0.7em;
     padding: 5px 0;
     transition: 0.3s;
 }
@@ -81,12 +73,19 @@ nav ul li a:hover {
     border-bottom: 2px solid #ff1493;
 }
 
-/* Section Styling */
 .section {
+    display: flex; /* Enable Flexbox */
+    flex-direction: column; /* Align items in a column */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
     padding: 50px 20px;
-    margin-top: 80px;
-    background: #fff;
-    border-radius: 15px;
+    margin: 80px auto; /* Center the section horizontally */
+    width: 90%; /* Adjust the width, making it responsive */
+    max-width: 1200px; /* Set a maximum width for large screens */
+    background: #fff; /* Background color */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for depth */
+    text-align: center; /* Center text within the section */
 }
 
 h2 {
@@ -160,10 +159,10 @@ h2 {
 /* Background styling */
 header {
     background: linear-gradient(135deg, #ff1493, #ff7f50);
-    color: white;
+    color: rgb(255, 254, 254);
     padding: 60px 20px;
     text-align: center;
-    border-bottom: 5px solid #ff1493;
+    border-bottom: 5px solid #f30e88;
 }
 
 header h1 {
@@ -187,16 +186,21 @@ footer p {
     font-size: 1.2em;
 }
 
+/* Mute Button */
 .mute-btn {
     position: fixed;
-    top: 20px;
-    right: 20px;
-    background-color: transparent;
-    border: none;
+    top: 50px;
+    right: 10px;
+    background: #ff69b4;
     color: white;
-    font-size: 2em;
+    border: none;
+    padding: 10px;
+    border-radius: 300%;
     cursor: pointer;
+    z-index: 1000;
+    
 }
+
 /* Memories Section */
 .memories .card {
     display: flex;
@@ -287,4 +291,62 @@ footer p {
     font-size: 1rem;
     line-height: 1.6;
     text-align: justify;
+}
+.fun-section {
+    padding: 50px 20px;
+    margin: 80px auto;
+    width: 90%;
+    max-width: 1200px;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.fun-section h2 {
+    font-size: 2.5rem;
+    color: #ff6f61;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.quiz {
+    background: #f04f4f;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    animation: popIn 1s ease-out;
+}
+
+.quiz p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin: 15px 0;
+    color: #333;
+    font-weight: 500;
+    animation: slideUp 1s ease-in-out;
+}
+
+.quiz p::before {
+    content: "• ";
+    color: #ff6f61;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.responsive-video {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    display: block; /* Centers the video horizontally */
+}
+
+@media (max-width: 768px) {
+    .responsive-video {
+        max-width: 100%;
+        border-radius: 5px;
+    }
 }
