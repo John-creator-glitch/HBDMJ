@@ -10,7 +10,7 @@
 </head>
 <body>
     <audio id="background-audio" autoplay loop>
-        <source src="Assets/sounds/a-sweet-romance.mp3" type="audio/mpeg">
+        <source src="Sound/a-sweet.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
 
@@ -54,11 +54,19 @@
 
     <section id="video" class="section video">
         <h2>A Special Message</h2>
-        <p class="italic-text">To someone who has been a special part of my life, here’s to celebrating your day with joy, laughter, and love. You’re amazing, and this is all for you! 💖</p>
-        <video controls>
+        <p style="background: linear-gradient(135deg, #ff69b4, #ff1493); /* Gradient button */
+        color: white;
+        padding: 15px 30px;
+        font-size: 1.2rem;
+        border-radius: 8px; /* Rounded corners */
+        text-align: center;
+        transition: transform 0.3s, background 0.3s; /* Adds hover animations */
+        margin: 10px auto;" class="italic-text">To someone who has been a special part of my life, here’s to celebrating your day with joy, laughter, and love. You’re amazing, and this is all for you! 💖</p>
+        <video controls class="responsive-video">
             <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
+        
     </section>
 
     <section id="memories" class="section memories">
