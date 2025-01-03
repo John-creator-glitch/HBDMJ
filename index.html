@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Birthday Bestie - Mahrukh</title>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="src/CSS/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <audio id="background-audio" autoplay loop>
-        <source src="Sound/a-sweet.mp3" type="audio/mpeg">
+        <source src="audio/a-sweet.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
 
@@ -19,11 +19,16 @@
     </button>
 
     <div class="birthday-popup" id="birthday-popup">
-        <h2>🎉 Happy Birthday Mahrukh! 🎉</h2>
-        <p>May this day be as amazing as you are!</p>
-        <button onclick="closePopup()">Close</button>
+        <div class="card-header">
+            <img src="img/12.jpg" alt="Birthday Cake" class="popup-image">
+        </div>
+        <div class="card-content">
+            <h2>🎉 Happy Birthday Mahrukh! 🎉</h2>
+            <p>May this day be as amazing as you are!</p>
+            <button onclick="closePopup()">Close</button>
+        </div>
     </div>
-
+    
     <nav>
         <ul>
             <li><a href="#video">Message</a></li>
@@ -38,6 +43,7 @@
         <h1 class="animate-text">Happy Birthday, Mahrukh 🎉</h1>
         <p class="animate-text">Celebrating the beautiful moments we’ve shared, even though our paths have changed.</p>
     </header>
+
     <section id="video" class="section video">
         <h2>A Special Message</h2>
         <p style="background: linear-gradient(135deg, #ff69b4, #ff1493); /* Gradient button */
@@ -58,7 +64,7 @@
     <section id="memories" class="section memories">
         <h2>Our Favorite Memories</h2>
         <div class="card animate-slide-up">
-            <img src="https://via.placeholder.com/300/8b0000/ffffff" alt="Memory 1">
+            <img src="src/img/M.jpg" alt="Memory 1">
             <div class="card-content">
                 <h3>The Day We First Met 🌟</h3>
                 <p>In 2022, we started as strangers at UMT. Little did we know, we would share countless memories and become best friends.</p>
@@ -113,18 +119,20 @@
             <p>What’s one thing you’ve taught me that I’ll always carry with me?</p>
             <p>What was the first song we danced to? 🎶</p>
         </div>
-    <section id="wishes" class="section wishes">
-        <h2>Special Birthday Wishes</h2>
-        <div class="wish animate-pop">
-            <h3>Wishing you a day filled with love, laughter, and all your favorite things!</h3>
-        </div>
-        <div class="wish animate-pop">
-            <h3>May this year bring you success, happiness, and endless joy. Happy Birthday!</h3>
-        </div>
-        <div class="wish animate-pop">
-            <h3>Here's to another year of fabulous adventures and amazing memories. Enjoy your special day!</h3>
-        </div>
+        <section id="wishes" class="section wishes">
+            <h2>Special Birthday Wishes</h2>
+            <div class="wish animate-pop">
+                <h3>Wishing you a day filled with love, laughter, and all your favorite things!</h3>
+            </div>
+            <div class="wish animate-pop">
+                <h3>May this year bring you success, happiness, and endless joy. Happy Birthday!</h3>
+            </div>
+            <div class="wish animate-pop">
+                <h3>Here's to another year of fabulous adventures and amazing memories. Enjoy your special day!</h3>
+            </div>
+        </section>
     </section>
+
     <section id="gallery" class="section gallery">
         <h2>Photo Gallery</h2>
         <div class="gallery-grid">
