@@ -9,33 +9,122 @@ body {
 }
 
 /* Popup */
+/* Popup Container */
 .birthday-popup {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: linear-gradient(to right, #ff9a9e, #fad0c4);
-    border-radius: 15px;
-    padding: 20px;
+    background-color: #fff;
+    border: 2px solid #ff6f61; /* Outer border */
+    border-radius: 10px; /* Rounded corners for the entire card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    max-width: 250px; /* Smaller width */
+    width: 90%; /* Responsive width */
+    height: auto; /* Adjust height automatically */
+    font-family: 'Arial', sans-serif;
+    z-index: 1000;
     text-align: center;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-    display: none;
-    z-index: 9999;
-    animation: bounceIn 1s ease-out;
 }
 
-.birthday-popup button {
-    background: #ff69b4;
+/* Card Header with Image */
+.card-header {
+    width: 95%;
+    background-color: #fff; /* Match the card's background */
+    padding: 5px; /* Padding around the image */
+    border-bottom: 2px solid #ff6f61; /* Separate the image from the content */
+}
+
+.popup-image {
+    width: 90%; /* Full width inside the container */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 8px; /* Rounded corners for the image */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add slight depth to the image */
+}
+
+/* Card Content */
+.card-content {
+    padding: 10px; /* Reduced padding for compactness */
+}
+
+.card-content h2 {
+    font-size: 16px; /* Smaller font size */
+    color: #333;
+    margin: 5px 0;
+}
+
+.card-content p {
+    font-size: 12px; /* Smaller font size */
+    color: #555;
+    margin: 5px 0 10px;
+}
+
+/* Button */
+.card-content button {
+    padding: 8px 12px; /* Reduced button size */
+    background-color: #ff6f61;
     color: white;
     border: none;
-    padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 12px; /* Smaller font size */
+    transition: all 0.3s;
 }
 
-.birthday-popup button:hover {
-    background: #ff85b3;
+.card-content button:hover {
+    background-color: #ff3b2f;
 }
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .card-content h2 {
+        font-size: 14px;
+    }
+
+    .card-content p {
+        font-size: 10px;
+    }
+
+    .card-content button {
+        font-size: 10px;
+        padding: 6px 10px;
+    }
+}
+
+
+/* Button */
+.card-content button {
+    padding: 10px 15px;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.card-content button:hover {
+    background-color: #ff3b2f;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .card-content h2 {
+        font-size: 16px;
+    }
+
+    .card-content p {
+        font-size: 12px;
+    }
+
+    .card-content button {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+}
+
 
 /* Navigation */
 nav {
